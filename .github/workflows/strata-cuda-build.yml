@@ -2,6 +2,8 @@ name: Strata CUDA build
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths: ['.github/workflows/strata-cuda-build.yml']
 
 permissions:
   contents: read
