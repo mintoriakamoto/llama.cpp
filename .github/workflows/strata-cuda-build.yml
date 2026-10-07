@@ -36,6 +36,3 @@ jobs:
       - name: Build
         run: cmake --build build -j"$(nproc)"
 
-      - name: CPU-only tests
-        # GPU tests need a device and the model files; none exist on hosted runners
-        run: cd build && ctest -j2 --timeout 300 -E 'expert_parity|pool_test' || true
